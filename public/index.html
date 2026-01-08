@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="kaindesign.css">
+    <title>Kain!</title>
+</head>
+<body>
+    <header>
+        <div class="mainheading">
+            <h1>Kain!</h1>
+            <h4>[ka-in]</h4>
+        </div>
+        <nav class="navibar">
+            <ul class="navmenu">
+                <li class="navitem">
+                    <a href="#about" class="navlink">
+                        About
+                        <img src="images/topbun.png">
+                    </a></li>
+                <li class="navitem">
+                    <a href="#reviews" class="navlink">
+                        Reviews
+                        <img src="images/letus.png">
+                    </a></li>
+                <li class="navitem">
+                    <a href="#dish_day" class="navlink">
+                        Dish of the Day
+                        <img src="images/tomato.png">
+                    </a></li>
+                <li class="navitem">
+                    <a href="#add_review" class="navlink">
+                        Log Review
+                        <img src="images/patty.png">
+                    </a></li> 
+                <li class="navitem">
+                    <a href="#contact" class="navlink">
+                        Contact
+                        <img src="images/bottombun.png">
+                    </a>
+                </li> 
+            </ul>
+
+            <div class="signin" id="logyourself" href="#logged">
+                <p class="hidden" id="greetuser">Hello, steve!</p>
+                <p id="logindicator">Log In</p>
+                <img src="images\cheeseslice.png">
+            </div>
+
+            <button class="hammenu_phone">
+                <img src="images/boorgir.png">
+                <!--Image of a burger as burger menu-->
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <div id="logged" class="login"> <!--Log In to Add Review Pop up-->
+            <h2>Log in</h2>
+            <p id="errormess"></p>
+            <form id="form"> <!--Log in area-->
+                <div>
+                    <input type="text" name="username" id="usernameinput" placeholder="Username">
+                </div>
+                <div>
+                    <input type="text" name="password" id="passwordinput" placeholder="Password">
+                </div>
+                <div>
+                    <button type="submit" id="submitbutton">Log in</button>
+                </div>
+            </form>
+        </div>
+
+        <div id="about">
+            <div class="about-text">
+                <h2>About</h2> 
+                <p>Kain! also known as kain tayo, is an invitation to eat together as a family or community.
+                    In Kain!, you are welcome to share your enthusiasm for food and we might or might not eat it up!</p>
+            </div>
+            <!--Brief Introduction and about this website-->
+        </div>
+
+        <div id="reviews">
+            <h2>Reviews</h2>
+            <hr class="solid_line"> 
+            <!--Summary of your reviews-->
+            <div class="container" id="logs"> 
+                <h3>Chicken Biryani</h3>
+                <p>The Dilli Cartel</p>
+                <img src="images/chicken-biryani-5.jpg">
+            </div>
+            <!--This div will fetch data and update the logs container-->
+        </div>
+
+        <div id="review_access"> 
+                <div class="reviewdetails">
+                    <div>
+                    <h3>Chicken Biryani</h3>
+                    <p>The Dilli Cartel</p>
+                    <p>Went here with a few friends and it is absolutely amazing, 
+                        the portions can serve our whole group and it is worth the price I must say. Would recommend to my other family members.</p>
+                    </div>
+                    <div>
+                    <img src="images/chicken-biryani-5.jpg">
+                    </div>
+                </div>
+        </div>
+
+        <div id="dish_day">
+            <h2>Dish of The day</h2>
+            <hr class="solid_line"> 
+            <div class="dishtext">
+                <div class="dishdesc">
+                <h2>Pierogi - Polish Dumplings</h2> 
+                <p>are filled dumplings made by wrapping unleavened dough around a filling and cooked in boiling water. 
+                    They are occasionally flavored with a savory or sweet garnish.</p>
+                </div>
+                <div class="dishimg">
+                    <img src="images/mogi.jpg">
+                </div>
+            </div>
+        </div>
+
+        <div id="add_review"> <!--Add review area-->
+            <h2>Log Review</h2>
+            <hr class="solid_line"> 
+            <p class="logtolog"> Log in to Add a review</p>
+            <div id="loggedin" class="hidden">
+                <div id="addrev">
+                    <input type="text" name="foodtitle" id="food_title" placeholder="Enter your food name">
+                    <input type="text" name="place" id="food_place" placeholder="Enter location">
+                    <textarea rows="5" cols="40" name="desc" class="largefield" id="food_desc" placeholder="Write your review.."></textarea>
+                <div class="imageupload">
+                    <img src="images\placeholderimg.png" id="foodpic"> <!--For default placeholder image-->
+                    <label for="food_img">Add your image</label>
+                    <input type="file" accept="image/jpeg, image/png, image/jpg" id="food_img" class="definput">
+                </div>
+                    <button type="submit" id="foodsubmit">Submit Review</button>
+                </div>
+            </div>
+            <!--Where your reviews are logged in-->
+        </div>
+    </main>
+
+    <footer>
+        <div id="contact">
+            <h2>Contact</h2>
+            <hr class="solid_line"> 
+                <div class="quicklinks">
+                </div>
+                <p> Made from the biggest appetite</p>
+                <p> Find me at 12345 Happy Street</p>
+        </div>
+    </footer>
+
+<script src="scriptforweb.js"></script>
+<script src="website.js"></script>
+</body>
+</html>

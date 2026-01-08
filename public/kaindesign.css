@@ -1,0 +1,623 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}/*--Remove all default web browser margin and padding*/
+
+/*----For all devices ----*/
+.solid_line {
+  height: 2px;
+  border: 0;
+  border-top: 1px solid #A6CDC6;
+}
+/*------ Navigation ------*/
+.navibar {
+  display: flex;
+  align-items: center;
+}
+
+.navitem {
+  list-style: none;
+}
+
+.navlink{
+  color: #16404D;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.navlink img{
+  width: 40px;
+  height: 40px;
+}
+
+.navlink:hover {
+  transition: top ease 0.7s;
+  color: #FBF5DD;
+  background-color: #8E1616;
+  top: -2px; /*How far up the content goes*/
+}
+
+.navmenu{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}
+
+/*LOG IN PROFILE*/
+
+.signin img{
+  width: 40px;
+  height: 40px;
+}
+
+.signin{
+  color: #16404D;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.signin:hover{
+  cursor: pointer;
+}
+
+header {
+  grid-area: header;
+  min-height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+}
+
+.mainheading {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #8E1616;
+}
+
+main {
+  grid-area: main;
+  max-width: 1000px;
+  display: grid;
+}
+
+.logtolog{
+  text-align: center;
+  margin: 10px;
+}
+
+main h2 {
+  color: #8E1616;
+}
+ 
+footer {
+  grid-area: footer;
+  background-color: #A6CDC6;
+}
+
+#contact h2 {
+  color: #8E1616;
+}
+
+#contact .solid_line {
+  height: 2px;
+  border: 0;
+  border-top: 1px solid #FBF5DD;
+  margin-bottom: 20px;
+}
+
+#contact p{
+  text-align: center;
+  margin: 5px;
+}
+
+/*Set which element falls under a grid area for easy grid template*/
+body {
+  font-family: "Noto Serif", serif;
+  background-color: #FBF5DD;
+  display: grid;
+  /*---grid template------*/
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+}
+
+/* --- Main Designing --- */
+p {
+  color: #16404D;
+  font-family: "Public Sans", sans-serif;
+}
+
+h1 {
+  color: #16404D;
+  text-shadow: 2px 2px #DDA853;
+}
+
+/*----HERO AREA---*/ 
+#about{
+  background-image:url("images/sharingfood.jpeg");
+  width: 100%;
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.about-text{
+  background-color: rgb(22, 64, 77, 0.8);
+  padding: 20px;
+  width: 50%; 
+  height: 100%; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.about-text p{
+  color: #FBF5DD;
+  font-weight: 300;
+}
+
+.about-text h2{
+  font-size: 3rem;
+  color: #DDA853;
+  text-shadow: 2px 3px #8E1616;
+}
+
+/*--------- Form area ----------------*/ 
+.not_logged_in{
+  padding: 10px;
+  text-align: center;
+}
+
+/*--- Log in pop up ------------*/
+.login{
+  box-shadow: 2px 5px 20px#16404D;
+  background-color: #FBF5DD;
+  border-radius: 10px;
+  transition: 0.3s;
+  position: fixed;
+  right: -100%;
+  top: 70px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.login.active {
+  right: 0;
+  z-index: 999;
+}
+
+.login div{
+  padding: 10px;
+}
+
+.login input{
+  height: 40px;
+  width: 300px;
+  border-radius: 10px;
+  display: block;
+  border: none;
+  padding: 10px;
+  font-family: "Public Sans", sans-serif;
+}
+
+#submitbutton{
+  height: 40px;
+  width: 300px;
+  color: #FBF5DD;
+  background-color: #8E1616;
+  border-radius: 10px;
+  font-family: "Public Sans", sans-serif;
+  border: none;
+}
+
+#submitbutton:hover{
+  cursor: pointer;
+  box-shadow: 2px 2px#DDA853;
+}
+
+.hidden{
+  display: none;
+}
+
+/*----------- Dish area ---------------------*/
+.dishtext{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dishdesc{
+  padding: 20px;
+}
+
+.dishimg img{
+  border-radius: 5px;
+}
+
+#addrev{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#addrev input{
+  height: 40px;
+  width: 300px;
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+  margin: 10px;
+  font-family: "Public Sans", sans-serif;
+}
+
+#foodsubmit{
+  height: 40px;
+  width: 300px;
+  color: #FBF5DD;
+  background-color: #8E1616;
+  border-radius: 10px;
+  font-family: "Public Sans", sans-serif;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.imageupload{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.imageupload img{
+  height: 200px;
+  width: 300px;
+  border-radius: 10px;
+}
+
+#food_desc{
+  font-family: "Public Sans", sans-serif;
+}
+
+.imageupload label{
+  padding: 10px;
+  margin-top: 10px;
+  color: #FBF5DD;
+  background-color: #8E1616;
+  border-radius: 5px;
+  border: none;
+  font-family: "Public Sans", sans-serif;
+  text-align: center;
+}
+
+.definput{
+  display: none;
+}
+
+.largefield{
+  padding: 10px;
+  border-radius: 10px;
+}
+/* ---------------------------- Reviews Area ----------------------*/
+.container h3{
+  color: #8E1616;
+}
+
+.container p{
+  color: #16404D;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #FBF5DD;
+  box-shadow: 1px 2px 5px #16404D;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 20px;
+  cursor: pointer;
+}
+
+.container img{
+  width: 120px;
+  height: 100px;
+  border-radius: 5px;
+}
+
+#review_access{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.reviewdetails{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  background-color: #FBF5DD;
+  border-radius: 5px;
+  padding: 10px;
+  padding: 10px;
+  box-shadow: 1px 10px 20px #16404D;
+}
+
+.reviewdetails h3{
+  color: #8E1616;
+}
+
+.reviewdetails p{
+  margin: 5px;
+}
+
+.reviewdetails img{
+  width: 200px;
+  margin: 10px;
+}
+
+/*---------------------------Phone Viewport--------------------------------*/
+@media (min-width: 340px) and (max-width: 540px) {
+
+  body{
+    grid-template-areas: 
+    "header header header header" 
+    "main main main main" 
+    "footer footer footer footer";
+  }
+
+  #about{
+    height: 350px;
+  }
+
+  .about-text p{
+    color: #FBF5DD;
+    font-weight: 300;
+  }
+
+  header {
+    display: flex;
+    flex-direction: row;
+    min-height: 70px;
+  }
+
+  header h1 {
+    margin: 10px 0;
+  }
+  
+  .hammenu_phone {
+    display: block;
+    background: none;
+    border: none;
+  }
+
+  .hammenu_phone.active {
+    transform: rotate(-180deg);
+    transition-duration: 0.3s;
+  }
+
+  .hammenu_phone img{
+    width: 80px;
+    height: 80px;
+    margin: 5px;
+  }
+
+  .navmenu {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    transition: 0.3s;
+    position: fixed;
+    background-color: rgb(167, 205, 198, 0.8);
+    box-shadow: 2px 5px 20px rgb(22, 64, 77, 0.8);
+    right: 0;
+    transform: translateX(100%);
+    top: 70px;
+    gap: 0;
+    width: 50%;
+    border-radius: 5px;
+    z-index: 1000; /*To ensure that the menu is on top of the layer*/
+  }
+
+  .navmenu.active {
+    transform: translateX(0);
+  }
+
+  .navitem {
+    padding: 5px;
+    margin-top: 10px;
+  }
+
+  .navlink{
+    color: #8E1616;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .container{
+    width: 50%;
+  }
+
+  #reviews{
+    margin: 10px;
+  }
+
+  #reviews p{
+    margin: 5px;
+  }
+
+  #dish_day{
+    margin: 10px;
+  }
+
+  .dishimg img{
+    width: 200px;
+    margin-right: 10px;
+  }
+
+  #add_review{
+    margin: 10px;
+  }
+
+  #logged p{
+    text-align: center;
+  }
+
+  #logged{
+    margin: 10px;
+  }
+
+  footer{
+    padding: 10px;
+  }
+
+  #loggedin h2{
+    margin: 10px;
+  }
+}
+
+/*-------------------------------Laptop Viewport--------------------------------*/
+@media (min-width: 1020px) {
+
+  main{
+    background-color: #FBF5DD;
+  }
+
+  header{
+    background-color: #FBF5DD;
+  }
+
+  body {
+    grid-template-columns: 17% auto auto 17%; 
+    /*Align the content in the center as it was leaning to the left*/
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "header header header header" 
+    ". main main . " 
+    "footer footer footer footer";
+    background-color: #8E1616;
+  }
+
+  .hammenu_phone {
+    display: none;
+  }
+
+  .navitem {
+    margin: 12px;
+  }
+
+  .navlink {
+    position: relative;
+    padding: 0 10px;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+/*About laptop*/
+  #about{
+    height: 500px;
+    background-size: cover;
+  }
+
+  .about-text h2{
+    font-size: 4rem;
+  }
+
+  .about-text p{
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  .dishtext{
+    margin-top: 20px;
+    margin: 0 20px;
+  }
+
+  #foodsubmit:hover{
+    box-shadow: 2px 2px#DDA853;
+  }
+
+  .imageupload label:hover{
+    cursor: pointer;
+    box-shadow: 2px 2px#DDA853;
+  }
+
+  #reviews{
+    margin: 20px;
+  }
+
+  #reviews p{
+    margin: 5px;
+  }
+
+  #dish_day{
+    margin: 20px;
+  }
+
+  .dishimg img{
+    width: 300px;
+    margin-top: 20px;
+  }
+
+  .container{
+    width: 20%;
+  }
+
+  .reviewdetails{
+    flex-direction: row;
+    background-color: #FBF5DD;
+    border-radius: 5px;
+    padding: 10px;
+    padding: 20px;
+    box-shadow: 1px 20px 30px #16404D;
+    width: 50%;
+  }
+
+  .reviewdetails img{
+    width: 200px;
+    margin: 10px;
+  }
+
+  #add_review{
+    margin: 20px;
+  }
+
+  #logged p{
+    text-align: center;
+  }
+
+  #logged{
+    margin: 20px;
+  }
+
+  footer{
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 17% auto auto 17%;
+    grid-template-areas:
+    ". contact contact ." ;
+  }
+
+  #contact{
+    grid-area: contact;
+    max-width: 1000px;
+  }
+}
+/*# sourceMappingURL=kaindesign.css.map */
